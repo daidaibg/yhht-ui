@@ -1,0 +1,9 @@
+@import "./els.css";
+/* @import "./nprogress.css"; */
+
+.yh-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
