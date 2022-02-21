@@ -1,21 +1,31 @@
-/*
- * @Author: daidai
- * @Date: 2021-09-28 17:07:15
- * @LastEditors: daidai
- * @LastEditTime: 2022-02-08 10:24:22
- * @FilePath: \yhht-ui\yhht-ui\types\yhht-ui.d.ts
- */
-import Vue from 'vue'
-import {YhhtUIComponent} from "./component"
-export interface InstallationOptions {
-  locale: any,
-}
 
+import Vue, { PluginObject } from 'vue'
+import { YhhtUIComponent, YhhtUIComponentSize, YhhtUIHorizontalAlignment } from './component'
 
+import {YhDrag} from './drag'
 export const version: string
-export type Component = YhhtUIComponent
-
+export interface InstallationOptions {
+    locale: any,
+    i18n: any,
+    size: string
+  }
+  /** The version of yhht-ui */
+export const version: string
+/**
+ * Install all yhht-ui components into Vue.
+ * Please do not invoke this method directly.
+ * Call `Vue.use(YhhtUI)` to install.
+ */
 export function install (vue: typeof Vue, options: InstallationOptions): void
 
+/** YhhtUI component common definition */
+export type Component = YhhtUIComponent
+
+/** Component size definition for button, input, etc */
+export type ComponentSize = YhhtUIComponentSize
+/** Horizontal alignment */
+export type HorizontalAlignment = YhhtUIHorizontalAlignment
+/** yh-drag Component */
+export class Drag extends YhDrag {}
 
 
