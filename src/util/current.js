@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-12 09:26:26
  * @LastEditors: daidai
- * @LastEditTime: 2022-02-11 14:06:29
+ * @LastEditTime: 2022-02-22 11:07:18
  * @FilePath: \yhht-ui\yhht-ui\src\util\current.js
  */
 /**
@@ -36,34 +36,56 @@ export const Drag = (e, dom, marginleft = 0) => {
 * @param {Object} dom  需要移动的元素 
 * @param {Array} range [minX,maxX, minY,maxY]
 */
-export const yhDrag = ({ e, dom, marginleft = 0, range,rangDom }) => {
+export const yhDrag = ({ e, dom, marginleft = 0, range, rangDom }) => {
+  e = e || window.event;
   let odiv = dom
-  let disX = e.clientX - odiv.offsetLeft
-  let disY = e.clientY - odiv.offsetTop
-  if(rangDom && !range){
-    let maxX = rangDom.offsetWidth-odiv.offsetWidth;
-    let maxY = rangDom.offsetHeight-odiv.offsetHeight;
-    range=[0, maxX, 0, maxY]
+  let disX = 0;
+  let disY = 0;
+  if (rangDom && !range) {
+    let maxX = rangDom.offsetWidth - odiv.offsetWidth;
+    let maxY = rangDom.offsetHeight - odiv.offsetHeight;
+    range = [0, maxX, 0, maxY]
   }
-  document.onmousemove = (e) => {
-    let left = e.clientX - disX + marginleft;
-    let top = e.clientY - disY;
-    
+
+  if (e.type == "mousedown") {
+    disX = e.clientX - odiv.offsetLeft
+    disY = e.clientY - odiv.offsetTop
+    document.onmousemove = (e) => {
+      let left = e.clientX - disX + marginleft;
+      let top = e.clientY - disY;
+      setDomLeftTop(left, top)
+      return false
+    }
+  } else {
+    disX = e.changedTouches[0].clientX - odiv.offsetLeft
+    disY = e.changedTouches[0].clientY - odiv.offsetTop
+    document.ontouchmove = (e) => {
+      let left = e.changedTouches[0].clientX - disX + marginleft;
+      let top = e.changedTouches[0].clientY - disY;
+      setDomLeftTop(left, top)
+    }
+  }
+  document.ontouchend = document.onmouseup = (e) => {
+    document.ontouchmove = document.onmousemove = null
+    document.ontouchend = document.onmouseup = null
+  }
+  /**
+   * @description:设置元素的left 与top 
+   * @param {*} params
+   * @return {*}
+   */
+  function setDomLeftTop(left, top) {
     if (range) {
       left = left < range[0] ? range[0] : left;
       left = left > range[1] ? range[1] : left;
       top = top < range[2] ? range[2] : top;
       top = top > range[3] ? range[3] : top;
     }
-    
     odiv.style.left = left + 'px'
     odiv.style.top = top + 'px'
-    return false
   }
-  document.onmouseup = (e) => {
-    document.onmousemove = null
-    document.onmouseup = null
-  }
+
+
   return false
 }
 /**
