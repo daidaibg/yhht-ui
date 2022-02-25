@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-12 09:26:26
  * @LastEditors: daidai
- * @LastEditTime: 2022-02-22 11:07:18
+ * @LastEditTime: 2022-02-22 15:41:29
  * @FilePath: \yhht-ui\yhht-ui\src\util\current.js
  */
 /**
@@ -46,7 +46,6 @@ export const yhDrag = ({ e, dom, marginleft = 0, range, rangDom }) => {
     let maxY = rangDom.offsetHeight - odiv.offsetHeight;
     range = [0, maxX, 0, maxY]
   }
-
   if (e.type == "mousedown") {
     disX = e.clientX - odiv.offsetLeft
     disY = e.clientY - odiv.offsetTop

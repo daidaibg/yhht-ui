@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-01-06 10:51:00
  * @LastEditors: daidai
- * @LastEditTime: 2022-01-11 16:51:26
+ * @LastEditTime: 2022-02-24 16:11:39
  * @FilePath: \yhht-ui\yhht-ui\packages\upload\src\upload-img.vue
 -->
 <template>
@@ -412,8 +412,9 @@ export default {
 }
 /* 加号按钮 */
 .yh-upload-img--button {
-  background-color: #fbfdff;
-  border: 1px dashed #c0ccda;
+  /* background-color: #fbfdff; */
+  background-color: var(--yh-bg-color-secondarycontainer);
+  border: 1px dashed var(--yh-border-level-3-color);
   border-radius: 6px;
   box-sizing: border-box;
   width: 100px;
@@ -422,6 +423,7 @@ export default {
 }
 .yh-upload-img--button .yh-icons-plus {
   font-size: 22px;
+  color: var(--yh-text-color-primary);
 }
 
 /* 列表 */
@@ -436,8 +438,8 @@ export default {
   margin: 0 8px 8px 0;
   border-radius: 6px;
   overflow: hidden;
-  background-color: #fff;
-  border: 1px solid #c0ccda;
+  background-color: var(--yh-bg-color-container);
+  border: 1px solid var(--yh-component-border);
   box-sizing: border-box;
   width: 100px;
   height: 100px;
@@ -450,7 +452,7 @@ export default {
   flex-direction: column;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--yh-mask-active);
   color: #fff;
 }
 .yh-upload-list__item-thumbnail {
@@ -460,8 +462,8 @@ export default {
 }
 .yh-upload-img--button:hover,
 .yh-upload-img:focus {
-  border-color: #409eff;
-  color: #409eff;
+  border-color: var(--yh-text-color-brand);
+  color: var(--yh-text-color-brand);
 }
 /* 操作 */
 .yh-upload-list-mask {
