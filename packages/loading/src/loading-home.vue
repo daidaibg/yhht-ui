@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-12-06 16:58:10
  * @LastEditors: daidai
- * @LastEditTime: 2021-12-07 10:40:05
+ * @LastEditTime: 2022-02-24 11:51:04
  * @FilePath: \yhht-ui\yhht-ui\packages\loading\src\loading-home.vue
 -->
 <template>
@@ -93,7 +93,7 @@ export default {
   display: block;
   width: 22px;
   height: 22px;
-  background-color: #1890ff;
+  background-color: var(--yh-brand-color);
   border-radius: 100%;
   opacity: 0.3;
   transform: scale(0.75);

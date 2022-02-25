@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-15 14:23:03
  * @LastEditors: daidai
- * @LastEditTime: 2021-09-18 16:29:58
+ * @LastEditTime: 2022-02-25 09:22:19
  * @FilePath: \yhht-ui\yhht-ui\src\util\color\color.js
  */
 export default {
@@ -15,6 +15,9 @@ export default {
 	},
 	//rgb颜色转hex颜色
 	RgbToHex(a, b, c) {
+		a=Number(a),
+		b=Number(b)
+		c=Number(c)
 		var hexs = [a.toString(16), b.toString(16), c.toString(16)]
 		for (var i = 0; i < 3; i++) {
 			if (hexs[i].length == 1) hexs[i] = "0" + hexs[i]

@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-16 09:20:55
  * @LastEditors: daidai
- * @LastEditTime: 2022-01-13 14:23:10
+ * @LastEditTime: 2022-02-25 15:56:22
  * @FilePath: \yhht-ui\yhht-ui\README.md
 -->
 
@@ -42,6 +42,24 @@ Drag(e,dom)
 
 ##  [完整API](http://www.eheretop.com:18080/yhht-ui/#/components/table-ele)
  [完整API](http://www.eheretop.com:18080/yhht-ui/#/components/table-ele)
+
+
+.
+.
+.
+.
+.
+..
+.
+.
+.
+.
+.
+.
+.
+.
+ ### qq群
+ 122722274
 
 
 

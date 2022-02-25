@@ -21,7 +21,7 @@
     easing: 'ease',
     positionUsing: '',
     speed: 200,
-    color:"#409EFF",
+    color:"#018E9A",
     trickle: true,
     trickleRate: 0.02,
     trickleSpeed: 800,

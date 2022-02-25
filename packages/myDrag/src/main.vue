@@ -68,7 +68,7 @@ export default {
     titleBackgronud: {
       type: String,
       default: () => {
-        return "#039ACD";
+        return "";
       },
     },
     titleAlign: {
@@ -78,7 +78,7 @@ export default {
     top: {
       type: String,
       default: () => {
-        return "15vh";
+        return "20vh";
       },
     },
     title: {
@@ -166,9 +166,11 @@ export default {
   margin-left: -330px;
   left: 50%;
   width: 660px;
-  background: white;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04); */
+  background: var(--yh-bg-color-container);
+  color: var(--yh-text-color-primary);
   box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  box-shadow: var(--yh-shadow-1);
+
 }
 .myDrag > .myDrag_title {
   width: 100%;
@@ -177,13 +179,16 @@ export default {
   text-align: left;
   line-height: 40px;
   font-size: 14px;
-  color: #fff;
+  color: var(--yh-text-color-anti);
 }
 .title-text {
   box-sizing: border-box;
   padding: 0 12px;
   width: 100%;
   height: 100%;
+  background: var(--yh-brand-color);
+  background: var( --yh-bg-color-comtitle);
+  
 }
 .myDrag > .myDrag_title .drag-top-right {
   position: absolute;
@@ -199,7 +204,7 @@ export default {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
-  color: #000;
+  color: var(--yh-text-color-primary);
 }
 .myDrag > .myDrag_body {
   width: 100%;

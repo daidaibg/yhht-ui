@@ -7,7 +7,7 @@
     border: none;
     cursor: pointer;
     color:#FFFFFF;
-    background:#409eff;
+    background:var(--yh-brand-color-10);
     display: inline-block;
     line-height: 1;
     font-size: 14px;
@@ -15,8 +15,8 @@
   
   .yh-button:focus,
   .yh-button:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
+    background: var(--primary-light-color);
+    border-color: var(--primary-light-color);
     color: #fff;
   }
   .yh-zoom-in-top-enter-active,
@@ -52,6 +52,16 @@
   .viewer-fade-leave-active {
     -webkit-animation: viewer-fade-out .3s;
     animation: viewer-fade-out .3s
+  }
+
+  .el-input__inner {
+    background: var(--yh-bg-color-container);
+    border-color: var(--yh-component-border);
+    color: var(--yh-text-color-secondary);
+  }
+
+  .el-input__inner::-webkit-input-placeholder{
+    color: var(--yh-text-color-placeholder);
   }
   
   
