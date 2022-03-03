@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-01-06 10:51:00
  * @LastEditors: daidai
- * @LastEditTime: 2022-02-24 16:11:39
+ * @LastEditTime: 2022-02-25 16:08:09
  * @FilePath: \yhht-ui\yhht-ui\packages\upload\src\upload-img.vue
 -->
 <template>
@@ -424,6 +424,7 @@ export default {
 .yh-upload-img--button .yh-icons-plus {
   font-size: 22px;
   color: var(--yh-text-color-primary);
+ 
 }
 
 /* 列表 */
