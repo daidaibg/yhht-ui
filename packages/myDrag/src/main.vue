@@ -1,19 +1,17 @@
 <template>
   <transition
-    name="dialog-fade"
+    name="yh-drag-fade"
     @after-enter="afterEnter"
     @after-leave="afterLeave"
   >
-    <!-- <div  v-if="visible"  class="myDrag_wrapper">    </div>
-    
-     -->
+    <div class="myDrag_wrapper" v-if="visible" :class="{ 'yh-model': model }">
+
       <div
         class="myDrag"
         :style="style"
         ref="drag"
         aria-modal="true"
         :aria-label="title || 'dragdialog'"
-         v-if="visible"
       >
         <div class="myDrag_title" @mousedown.prevent="move">
           <slot name="header">
@@ -41,6 +39,7 @@
         </div>
       </div>
 
+    </div>
   </transition>
 </template>
 
@@ -53,6 +52,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    model: {
+      type: Boolean,
+      default: false,
+    },
+    disableDrag:{
+       type: Boolean,
+        default: false,
+    },
     width: {
       type: Number,
       default: () => {
@@ -62,7 +69,7 @@ export default {
     borderRadius: {
       type: Number,
       default: () => {
-        return 0;
+        return 6;
       },
     },
     titleBackgronud: {
@@ -98,7 +105,9 @@ export default {
       default: true,
     },
   },
-  watch: {},
+  watch: {
+
+  },
   computed: {
     style() {
       let style = {};
@@ -111,13 +120,15 @@ export default {
       return style;
     },
   },
+
   mounted() {
     if (this.appendToBody) {
       document.body.appendChild(this.$el);
     }
+
+  
   },
   destroyed() {
-    // if appendToBody is true, remove DOM node after destroy
     if (this.appendToBody && this.$el && this.$el.parentNode) {
       this.$el.parentNode.removeChild(this.$el);
     }
@@ -136,6 +147,9 @@ export default {
       }
     },
     move(e) {
+      if(this.disableDrag){
+        return false
+      }
       return Drag(e, this.$refs.drag, this.width / 2);
     },
     afterLeave() {
@@ -149,17 +163,65 @@ export default {
 </script>
 
 <style scoped>
-.myDrag_wrapper{
-  position: fixed;
+.yh-drag-fade-enter-active {
+  
+  -webkit-animation: yh-drag-fade-in 0.3s;
+  animation: yh-drag-fade-in 0.3s;
+}
+
+.yh-drag-fade-leave-active {
+  -webkit-animation: yh-drag-fade-out 0.3s;
+  animation: yh-drag-fade-out 0.3s;
+}
+@keyframes yh-drag-fade-in {
+  0% {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes yh-drag-fade-out {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
+
+.myDrag_wrapper {
+  pointer-events: none;
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* background: rgba(119, 119, 119, 0.1); */
+  background: transparent;
   top: 0;
   left: 0;
-   overflow: auto;
-    margin: 0
+  overflow: auto;
+}
+.myDrag_wrapper.yh-model {
+  pointer-events: all;
+  position: fixed;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: var( --yh-mask-active);
+  height: calc(100% + 20px);
+
+  margin: 0;
 }
 .myDrag {
+  pointer-events: all;
   position: absolute;
   z-index: 999;
   top: 30px;
@@ -170,7 +232,6 @@ export default {
   color: var(--yh-text-color-primary);
   box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
   box-shadow: var(--yh-shadow-1);
-
 }
 .myDrag > .myDrag_title {
   width: 100%;
@@ -187,8 +248,7 @@ export default {
   width: 100%;
   height: 100%;
   background: var(--yh-brand-color);
-  background: var( --yh-bg-color-comtitle);
-  
+  background: var(--yh-bg-color-comtitle);
 }
 .myDrag > .myDrag_title .drag-top-right {
   position: absolute;
