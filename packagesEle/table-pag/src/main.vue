@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-13 10:07:08
  * @LastEditors: daidai
- * @LastEditTime: 2022-01-17 10:00:21
+ * @LastEditTime: 2022-03-23 14:31:00
  * @Descripttion: 图像裁剪组件
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\table-pag\src\main.vue
 -->
@@ -20,6 +20,7 @@
       :data="data"
       style="width: 100%"
       v-bind="$attrs"
+      v-on="$listeners"
       :size="size"
       :width="width"
       :maxHeight="maxHeight"
@@ -180,6 +181,7 @@ export default {
   },
   mounted() {
     this.paginationData.currentPage =this.currentPage
+    this.paginationData.pageSize =this.pageSize
     if (this.inPageGetData) this.handleCurrentChange();
   },
   methods: {

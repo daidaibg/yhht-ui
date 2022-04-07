@@ -56,6 +56,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disableDrag:{
+       type: Boolean,
+        default: false,
+    },
     width: {
       type: Number,
       default: () => {
@@ -65,7 +69,7 @@ export default {
     borderRadius: {
       type: Number,
       default: () => {
-        return 0;
+        return 6;
       },
     },
     titleBackgronud: {
@@ -143,6 +147,9 @@ export default {
       }
     },
     move(e) {
+      if(this.disableDrag){
+        return false
+      }
       return Drag(e, this.$refs.drag, this.width / 2);
     },
     afterLeave() {
@@ -198,7 +205,7 @@ export default {
   pointer-events: none;
   position: absolute;
   width: 100%;
-  height: calc(100% + 20px);
+  height: 100%;
   background: transparent;
   top: 0;
   left: 0;
@@ -207,7 +214,10 @@ export default {
 .myDrag_wrapper.yh-model {
   pointer-events: all;
   position: fixed;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: var( --yh-mask-active);
+  height: calc(100% + 20px);
+
   margin: 0;
 }
 .myDrag {

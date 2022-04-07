@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-01-06 10:51:00
  * @LastEditors: daidai
- * @LastEditTime: 2022-02-25 16:08:09
+ * @LastEditTime: 2022-03-04 11:38:09
  * @FilePath: \yhht-ui\yhht-ui\packages\upload\src\upload-img.vue
 -->
 <template>
@@ -28,7 +28,7 @@
           :style="{ objectFit: fit }"
         />
         <div class="yh-upload-list-mask yh-flex-center">
-          <i class="el-icon-zoom-in" @click="imageViewer(file)"></i>
+          <i class="yh-icons-zoom-in" @click="imageViewer(file)"></i>
           <i class="yh-icons-delete" @click="deleteFile(file)"></i>
         </div>
       </li>
