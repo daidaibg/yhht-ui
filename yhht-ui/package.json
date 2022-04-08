@@ -1,0 +1,24 @@
+{
+  "name": "yhht-ui",
+  "version": "1.2.10",
+  "description": "A Component Library for Vue.js.",
+  "main": "./src/index.js",
+  "private":false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.17",
+    "element-ui": "^2.11.1"
+  },
+  "keywords": [
+    "element",
+    "vue",
+    "vue-ui",
+    "ui"
+  ],
+  "typings": "types/index.d.ts",
+  "homepage": "https://www.npmjs.com/package/yhht-ui",
+  "author": "daidai",
+  "license": "ISC"
+}
