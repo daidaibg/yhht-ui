@@ -1,24 +1,43 @@
 {
-  "name": "yhht-ui",
-  "version": "1.2.10",
-  "description": "A Component Library for Vue.js.",
-  "main": "./src/index.js",
-  "private":false,
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name yhht-ui --dest lib yhht-ui/src/index.js"
   },
-  "peerDependencies": {
-    "vue": "^2.5.17",
-    "element-ui": "^2.11.1"
+  "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "axios": "^0.21.4",
+    "clipboard": "^2.0.10",
+    "core-js": "^3.6.5",
+    "cropperjs": "^1.5.12",
+    "crypto-js": "^4.1.1",
+    "docx-preview": "^0.1.4",
+    "element-ui": "^2.15.6",
+    "highlight.js": "^11.4.0",
+    "marked": "^3.0.4",
+    "nprogress": "^0.2.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "yhht-ui": "file:yhht-ui"
   },
-  "keywords": [
-    "element",
-    "vue",
-    "vue-ui",
-    "ui"
-  ],
-  "typings": "types/index.d.ts",
-  "homepage": "https://www.npmjs.com/package/yhht-ui",
-  "author": "daidai",
-  "license": "ISC"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-plugin-component": "^1.1.1",
+    "node-sass": "^4.11.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
