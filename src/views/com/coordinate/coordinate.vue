@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 15:00:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:38:49
+ * @LastEditTime: 2022-05-09 17:28:30
  * @FilePath: \yhht-ui\src\views\link-ele\Get-xy\Get-xy.vue
 -->
 
@@ -11,16 +11,15 @@
     <h2>获取xy坐标</h2>
     <p>默认为高德地图，返回xy经纬度坐标。（后续考虑兼容其他地图）</p>
     <div class="success">
-      <p>如果您没有使用element，可以使用组件（  <el-link
-         href="/components/coordinates"
+      <p>如果您使用element，可以使用这个组件或去使用结合element开发的组件（  <el-link
+         href="/components/getxy"
         type="primary"
-        >获取坐标coordinates </el-link
-      >），同样能实现这个效果，支持两种方式。</p>
+        >getXY </el-link
+      >），支持两种方式。</p>
     </div>
     <div class="warning">
       <p>修改样式的话未提供开放接口，需要通过css强制修改样式</p>
       <p>经纬度要为数字类型</p>
-      <p>默认采用element弹窗方式，如果不符合业务逻辑谨慎使用</p>
     </div>
     <p>
       如果配置过请忽略，请先配置好地图配置。官方配置（
@@ -39,18 +38,18 @@
     ></code-light>
     <h3>例子</h3>
 
-    <code-wrap :codeText="codeText.codetext">
-      <el-button type="primary" @click="openGetxy">获取坐标</el-button>
-      <el-button type="primary" @click="openGetxy(118.110602, 24.540688)"
-        >获取坐标（传参）</el-button
+    <code-wrap :codeText="codeText.codetext" code-type="xml">
+      <yh-button theme="primary" @click="openGetxy">获取坐标</yh-button>
+      <yh-button theme="primary" @click="openGetxy(118.110602, 24.540688)"
+        >获取坐标（传参）</yh-button
       >
 
-      <yh-getxy
+      <yh-coordinate
         @close="close"
         ref="yhxy_ref"
         @searchMessage="searchMessage"
         @locationMessage="locationMessage"
-      ></yh-getxy>
+      ></yh-coordinate>
     </code-wrap>
     <h3>通过方法调用</h3>
     <p>通过方法调用，需要先引入</p>
@@ -63,18 +62,18 @@
       </p>
     </div>
     <code-light
-      :text="`import { getXy } from &quot;yhht-ui/src/link-el&quot;;`"
+      :text="`import { GetCoordinate } from &quot;yhht-ui&quot;;`"
       wrapClass="codes"
       codeType="javascript"
     ></code-light>
     <h3>例子</h3>
-    <code-wrap :codeText="codeText.codefun">
-      <el-button type="primary" @click="funGetxy(118.110602, 24.540688)"
-        >方法调用</el-button
+    <code-wrap :codeText="codeText.codefun" code-type="xml">
+      <yh-button theme="primary" @click="funGetxy(118.110602, 24.540688)"
+        >方法调用</yh-button
       >
 
-      <el-button type="primary" @click="funGetxy2(118.110602, 24.540688)"
-        >方法调用(隐藏搜索框)</el-button
+      <yh-button theme="primary" @click="funGetxy2(118.110602, 24.540688)"
+        >方法调用(隐藏搜索框)</yh-button
       >
     </code-wrap>
     <h3>Options（组件）</h3>
@@ -92,8 +91,8 @@
     <TableParam :data="funs2" type="funs" />
     <h3>方法（通过函数调用）</h3>
     <code-light
-      :text="`let getxy=getXy({...params}}); 
-getxy.destroy();//等...`"
+      :text="`let GetCoordinate=GetCoordinate({...params}}); 
+GetCoordinate.destroy();//等...`"
       wrapClass="codes"
       codeType="javascript"
     ></code-light>
@@ -102,8 +101,8 @@ getxy.destroy();//等...`"
 </template>
 
 <script>
-import code from "./get-sy";
-import { getXy } from "yhht-ui/src/link-el";
+import code from "./coordinate";
+import { GetCoordinate } from "yhht-ui";
 export default {
   data() {
     return {
@@ -131,7 +130,7 @@ export default {
         },
         {
           method: "close",
-          explain: "关闭事件，   // isClickOk true代表点击的确定按钮",
+          explain: "关闭事件，xy坐标，isClickOk true代表点击确定按钮",
           parms: "(xyData,isClickOk) {}",
         },
       ],
@@ -178,7 +177,7 @@ export default {
         },
         {
           name: "close",
-          explain: "(xy,isClickOk)=>{}, 关闭事件回调，// isClickOk true代表点击的确定按钮",
+          explain: "(xy,isClickOk)=>{},xy坐标，isClickOk true代表点击确定按钮",
         },
       ],
     };
@@ -228,26 +227,23 @@ export default {
      * @return {*}
      */
     funGetxy(x, y) {
-      this.GetXY = getXy({
+      this.GetXY = GetCoordinate({
         // lat: y,
         // lng: x,
         searchHide: false,
-        
         locationMessage: (res) => {
           console.log("locationMessage", res);
         },
         searchMessage: (res) => {
           console.log("searchMessage", res);
         },
-         // isClickOk true代表点击的确定按钮
-
         close: (xy,isClickOk) => {
           console.log(xy,isClickOk);
         },
       });
     },
     funGetxy2(x, y) {
-      getXy({
+      GetCoordinate({
         lat: y,
         lng: x,
         searchHide: true,
@@ -258,10 +254,9 @@ export default {
         searchMessage: (res) => {
           console.log("searchMessage", res);
         },
-      // isClickOk true代表点击的确定按钮
-
-        close: (xy,isClickOk) => {
-          console.log(xy,isClickOk);
+        close: (xy) => {
+           // isClickOk true代表点击的确定按钮
+          console.log(xy);
         },
       });
     },
@@ -269,4 +264,7 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
+.yh-button+.yh-button{
+  margin-left: 12px;
+}
 </style>

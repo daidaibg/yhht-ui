@@ -1,8 +1,8 @@
 /*
  * @Author: daidai
  * @Date: 2021-07-12 09:26:26
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-04 14:29:47
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 17:21:21
  * @FilePath: \yhht-ui\yhht-ui\src\index.js
  */
 // import Cropper from '../packages/cropper/index';// 图像预览 暂未写完
@@ -12,6 +12,8 @@ import Drag from '../packages/myDrag/index'
 import Loading from '../packages/loading/index'
 import UploadImg from '../packages/upload'
 import Button from '../packages/button'
+import Coordinate from '../packages/coordinates/index'
+import GetCoordinate from '../packages/coordinates/src/main'
 
 const components = [
   Skeleton,
@@ -19,7 +21,8 @@ const components = [
   Drag,
   Loading,
   UploadImg,
-  Button
+  Button,
+  Coordinate
 ];
 
 const install = function(Vue, opts = {}) {
@@ -42,7 +45,8 @@ if (typeof window !== 'undefined' && window.Vue) {
     Drag,
     Loading,
     UploadImg,
-    Button
+    Button,
+    Coordinate
   };
 
   export {
@@ -50,6 +54,8 @@ if (typeof window !== 'undefined' && window.Vue) {
     SkeletonItem,
     Drag,
     UploadImg,
-    Button
+    Button,
+    Coordinate,
+    GetCoordinate
     
   }

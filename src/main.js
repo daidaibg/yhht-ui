@@ -1,8 +1,8 @@
 /*
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-03 18:02:13
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 15:58:08
  * @FilePath: \yhht-ui\src\main.js
  */
 import Vue from 'vue'
@@ -29,7 +29,8 @@ Vue.component("code-light",Codes)
 Vue.component("TableParam",TableParam)
 
 Vue.config.productionTip = false
-Vue.use(yhhtUi).use(yhAndEleUi)
+Vue.use(yhhtUi)
+Vue.use(yhAndEleUi)
 Vue.use(ElementUI)
 Vue.prototype.$loadFile=loadFile
 new Vue({

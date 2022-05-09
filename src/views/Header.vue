@@ -20,19 +20,19 @@
         <div class="item" :class="{ activeItem: active == 'com' }">
           <router-link :to="{ path: '/components' }">组件&JS</router-link>
         </div>
-        <div class="item" :class="{ activeItem: active == 'map' }">
+        <!-- <div class="item" :class="{ activeItem: active == 'map' }">
           <router-link :to="{ path: '/map' }">地图(gis)</router-link>
         </div>
         <div class="item" :class="{ activeItem: active == 'sysAndMap' }">
           <router-link :to="{ path: '/sysAndMap' }">地图+管理</router-link>
-        </div>
+        </div> -->
       </div>
       <el-dropdown class="phoneTab" trigger="click" @command="command">
         <i class="el-icon-s-operation"></i>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="/components">组件&JS</el-dropdown-item>
-          <el-dropdown-item command="/map">地图(gis)</el-dropdown-item>
-          <el-dropdown-item command="/sysAndMap">地图+管理</el-dropdown-item>
+          <!-- <el-dropdown-item command="/map">地图(gis)</el-dropdown-item>
+          <el-dropdown-item command="/sysAndMap">地图+管理</el-dropdown-item> -->
         </el-dropdown-menu>
       </el-dropdown>
       <div class="actionTheme">

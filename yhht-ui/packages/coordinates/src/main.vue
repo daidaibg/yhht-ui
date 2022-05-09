@@ -2,32 +2,32 @@
  * @Author: daidai
  * @Date: 2021-09-14 15:02:55
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:37:04
+ * @LastEditTime: 2022-05-09 17:35:37
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\getXY\src\main.vue
 -->
 <template>
-  <el-dialog
+  <yh-drag
     :title="title"
     append-to-body
     :visible.sync="visible"
     :width="width"
     :close-on-click-modal="false"
-    class="yh-lnglats"
+    class="yh-coordinates"
     :before-close="beforeclose"
-    :custom-class="yhGetxyClass"
-    modal
+    model
+    :isIf="false"
   >
     <!-- v-dialogDrag -->
 
     <div class="yh-inputs" v-if="!searchHide">
-      <el-input
+      <input
+      class="yh-input"
         v-model="keyword"
         placeholder=""
         @input="search"
         clearable
-        size="mini"
         @focus="tipsshow = true"
-      ></el-input>
+      />
       <ul v-show="tipsshow">
         <li
           class="text-overflow-2"
@@ -48,19 +48,20 @@
     </div>
     <div ref="map" :id="mapId"></div>
     <span class="dialog-footer">
-      <el-button @click="close" size="mini">取 消</el-button>
-      <el-button type="primary" @click="subItem" size="mini" :loading="loading"
-        >保 存</el-button
+      <yh-button @click="close" >取 消</yh-button>
+      <yh-button theme="primary" @click="subItem"  :loading="loading"
+        >保 存</yh-button
       >
     </span>
-  </el-dialog>
+  </yh-drag>
 </template>
 
 <script>
 import { defProps } from "./config";
+import Drag from "../../myDrag/src/main.vue"
 export default {
-  name: "yh-getxy",
-  components: {},
+  name: "yh-coordinate",
+  components: {[Drag.name]:Drag},
   props: {
     title: {
       type: String,
@@ -75,7 +76,7 @@ export default {
       },
     },
     width: {
-      type: String,
+      type: Number,
       default: () => {
         return defProps.width;
       },
@@ -106,7 +107,7 @@ export default {
   methods: {
     init(x, y) {
       this.visible = true;
-      console.log(x, y, this.map);
+      console.log(x,y,this.map)
       this.$nextTick(() => {
         if (!this.map) {
           this.map = new AMap.Map(this.mapId, {
@@ -166,8 +167,10 @@ export default {
               this.formatxy(this.lanlat.lng, this.lanlat.lat);
             }
           }
+           
         }
       });
+      return this.map
     },
     onitem(item) {
       // console.log(item);
@@ -235,15 +238,10 @@ export default {
       this.setMarker();
     },
     destroyMap() {
-      let amapGeolocationMarkerDom = document.querySelector(
-        ".amap-geolocation-marker"
-      );
+      let amapGeolocationMarkerDom = document.querySelector(".amap-geolocation-marker");
       amapGeolocationMarkerDom &&
-        amapGeolocationMarkerDom.removeEventListener(
-          "click",
-          this.addclickGeolocation
-        );
-      if (this.map) {
+        amapGeolocationMarkerDom.removeEventListener("click", this.addclickGeolocation);
+      if (this.map ) {
         this.map.destroy();
         // console.info("地图已销毁");
       }
@@ -282,6 +280,7 @@ export default {
     close() {
       this.visible = false;
       this.emitClose({});
+
     },
     beforeclose(done) {
       this.emitClose({});
@@ -297,8 +296,8 @@ export default {
     },
     subItem() {
       this.visible = false;
-      let lanlat = {};
-       if( this.lanlat.lat&&this.lanlat.lat!=='' ){
+      let lanlat ={}
+      if( this.lanlat.lat&&this.lanlat.lat!=='' ){
         lanlat={
           ...this.lanlat
         }
@@ -306,6 +305,7 @@ export default {
       }else{
          this.emitClose(lanlat,true)
       }
+     
     },
   },
 };

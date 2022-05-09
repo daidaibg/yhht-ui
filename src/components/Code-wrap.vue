@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2021-09-30 15:00:52
- * @LastEditors: daidai
- * @LastEditTime: 2022-02-25 10:00:12
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 11:34:32
  * @FilePath: \yhht-ui\src\components\Code-wrap.vue
 -->
 <template>
@@ -17,7 +17,7 @@
     </div>
     <div class="code-inner-wrap" :style="{ height: `${codeH}px` }">
       <div class="code_wrap" ref="codeinner">
-        <slot name="code"> <code-light :text="codeText"></code-light></slot>
+        <slot name="code"> <code-light :text="codeText" :codeType="codeType"></code-light></slot>
       </div>
     </div>
     <div
@@ -54,6 +54,10 @@ export default {
   },
   props: {
     codeText: "",
+    codeType: {
+      type: String,
+      default: () => "language-javascript",
+    },
   },
   created() {},
   computed: {
@@ -111,8 +115,8 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
-.code-wrap{
-  .code_wrap{
+.code-wrap {
+  .code_wrap {
     border-bottom: none;
   }
 }

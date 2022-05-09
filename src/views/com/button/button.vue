@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2022-03-04 14:12:12
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-31 09:01:16
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 11:58:10
  * @FilePath: \yhht-ui\src\views\com\button\button.vue
 -->
 <template>
@@ -19,7 +19,7 @@
     <p>
       直接使用文字作为按钮。是视觉吸引力最弱的一个按钮，通常出现在表格操作栏、标题和字段旁等。
     </p>
-    <code-wrap :codeText="text.text" style="position: relative">
+    <code-wrap :codeText="text.text" style="position: relative" code-type="language-xml">
       <div class="row">
         <yh-button>默认按钮</yh-button>
         <yh-button theme="primary">主要按钮</yh-button>
@@ -152,8 +152,11 @@
 
 <script>
 import text from "./button";
+import {Button} from "yhht-ui"
+
 export default {
   
+  components:{[Button.name]:Button},
   data() {
     return {
       text: text,

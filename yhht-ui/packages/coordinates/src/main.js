@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 17:08:26
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:39:49
+ * @LastEditTime: 2022-05-09 17:40:18
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\getXY\src\main.js
  */
 import Vue from 'vue';
@@ -11,7 +11,7 @@ import {defProps} from './config'
 let GETXY = Vue.extend(Main);
 let instance;
 let defPropsKeys = Object.keys(defProps)
-var GetXY = function (options) {
+var GetCoordinate = function (options) {
     if (Vue.prototype.$isServer) return;
     options = options || {};
     function emitMessage(type, param,treeParam=undefined) {
@@ -61,4 +61,4 @@ var GetXY = function (options) {
 };
 
 
-export default GetXY;
+export default GetCoordinate;

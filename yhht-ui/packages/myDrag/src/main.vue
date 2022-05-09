@@ -4,8 +4,7 @@
     @after-enter="afterEnter"
     @after-leave="afterLeave"
   >
-    <div class="myDrag_wrapper" v-if="visible" :class="{ 'yh-model': model }">
-
+    <div class="myDrag_wrapper" v-show="visible" :class="{ 'yh-model': model }">
       <div
         class="myDrag"
         :style="style"
@@ -51,6 +50,10 @@ export default {
     visible: {
       type: Boolean,
       default: false,
+    },
+    isIf: {
+      type: Boolean,
+      default: true,
     },
     model: {
       type: Boolean,

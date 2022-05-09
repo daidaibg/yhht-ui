@@ -1,8 +1,8 @@
 /*
  * @Author: daidai
  * @Date: 2021-07-14 17:24:36
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-04 14:13:55
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 12:07:35
  * @FilePath: \yhht-ui\src\router\index.js
  */
 import Vue from 'vue';
@@ -134,6 +134,14 @@ const routes = [
             path: '/components/getxy',
             name: 'getxy',
             component: () => import(/* webpackChunkName: "ele" */ '../views/link-ele/Get-xy/Get-xy.vue'),
+            meta: {
+              type: 'com'
+            }
+          },
+          {
+            path: '/components/coordinates',
+            name: 'coordinates',
+            component: () => import(/* webpackChunkName: "Components" */ '../views/com/coordinate/coordinate.vue'),
             meta: {
               type: 'com'
             }

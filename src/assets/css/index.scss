@@ -147,7 +147,14 @@ p {
   ;
   margin: 20px 0;
 }
-
+.success {
+  padding: 8px 16px;
+  background-color: var(--yh-success-color-1);
+  border-radius: 4px;
+  border-left: 5px solid var(--yh-success-color-5);
+  ;
+  margin: 20px 0;
+}
 .tipdefault {
   padding: 8px 16px;
   background-color: var(--yh-remind-color-2);

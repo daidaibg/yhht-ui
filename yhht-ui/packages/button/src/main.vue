@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2022-03-04 14:27:53
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-30 18:18:06
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-09 11:31:12
  * @FilePath: \yhht-ui\yhht-ui\packages\button\src\main.vue
 -->
 <template>
@@ -26,7 +26,7 @@
     @click="click"
   >
     <div
-      class="yh-icons-button-loading"
+      class="yh-icons-loading"
       style="margin-right: 6px"
       v-if="loading"
     ></div>

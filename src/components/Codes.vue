@@ -16,7 +16,7 @@ export default {
   props: {
     codeType: {
       type:String,
-      default:()=>"javascript html xml"
+      default:()=>"language-javascript  "
     },
     text: {
       type:String,

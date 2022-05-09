@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="menu_mask" v-if="!phoneMenuCol" @click="phoneMenuCol = !phoneMenuCol"></div>
+    <div
+      class="menu_mask"
+      v-if="!phoneMenuCol"
+      @click="phoneMenuCol = !phoneMenuCol"
+    ></div>
 
     <div class="menu" :class="{ phoneMenuColIn: phoneMenuCol }">
       <div class="menu_Stretch" @click="phoneMenuCol = !phoneMenuCol">
@@ -57,15 +61,19 @@ export default {
               url: "/components/buttons",
             },
             {
-              name: "加载状态",
+              name: "获取坐标coordinates",
+              url: "/components/coordinates",
+            },
+            {
+              name: "加载状态loading",
               url: "/components/loading",
             },
             {
-              name: "拖拽弹窗",
+              name: "拖拽弹窗drag",
               url: "/components/drag",
             },
             {
-              name: "上传图片列表",
+              name: "上传图片列表upload img",
               url: "/components/upload",
             },
           ],
@@ -225,7 +233,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.26) 2px 0px 8px;
     width: 40px;
     height: 40px;
-       line-height: 40px;
+    line-height: 40px;
     align-items: center;
     justify-content: center;
     background: var(--yh-bg-color-container);
