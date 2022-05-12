@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 17:08:26
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:39:49
+ * @LastEditTime: 2022-05-12 11:19:08
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\getXY\src\main.js
  */
 import Vue from 'vue';
@@ -24,7 +24,8 @@ var GetXY = function (options) {
     }
     // console.log(options,props,Object.prototype.toString.call(options.searchHide))
     if(!instance){
-        let props = {...defProps};
+        // let props = {...defProps};
+        let props = JSON.parse(JSON.stringify(defProps)) 
         defPropsKeys.forEach(key=>{
             if (Object.hasOwnProperty.call(options, key)) {
                 props[key]=options[key]
@@ -36,9 +37,7 @@ var GetXY = function (options) {
                 mapId:'yh-map-instance',
                 yhGetxyClass:options.yhGetxyClass||"",
             },
-            propsData:{
-                ...props
-            }
+            propsData:props
         });
         instance.$mount();
     }else{
