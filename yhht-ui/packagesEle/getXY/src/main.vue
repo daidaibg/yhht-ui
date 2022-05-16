@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-14 15:02:55
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:37:04
+ * @LastEditTime: 2022-05-12 15:22:01
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\getXY\src\main.vue
 -->
 <template>
@@ -106,7 +106,7 @@ export default {
   methods: {
     init(x, y) {
       this.visible = true;
-      console.log(x, y, this.map);
+      // console.log(x, y, this.map);
       this.$nextTick(() => {
         if (!this.map) {
           this.map = new AMap.Map(this.mapId, {
