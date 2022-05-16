@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 15:00:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:28:30
+ * @LastEditTime: 2022-05-12 14:50:27
  * @FilePath: \yhht-ui\src\views\link-ele\Get-xy\Get-xy.vue
 -->
 
@@ -20,6 +20,11 @@
     <div class="warning">
       <p>修改样式的话未提供开放接口，需要通过css强制修改样式</p>
       <p>经纬度要为数字类型</p>
+
+    </div>
+    <div class="warning">
+      <p>新版本谷歌的安全策略，禁止了非安全地址的获取定位地址，所以除安全地址外获取定位地址均会报错。</p>
+
     </div>
     <p>
       如果配置过请忽略，请先配置好地图配置。官方配置（
