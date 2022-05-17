@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 15:00:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-12 14:50:27
+ * @LastEditTime: 2022-05-16 10:40:31
  * @FilePath: \yhht-ui\src\views\link-ele\Get-xy\Get-xy.vue
 -->
 
@@ -65,6 +65,7 @@
       <p>
         因为把组件添加至body中，修改样式需要在全局修改，或则组件样式不添加scoped
       </p>
+      
     </div>
     <code-light
       :text="`import { GetCoordinate } from &quot;yhht-ui&quot;;`"
@@ -76,7 +77,6 @@
       <yh-button theme="primary" @click="funGetxy(118.110602, 24.540688)"
         >方法调用</yh-button
       >
-
       <yh-button theme="primary" @click="funGetxy2(118.110602, 24.540688)"
         >方法调用(隐藏搜索框)</yh-button
       >

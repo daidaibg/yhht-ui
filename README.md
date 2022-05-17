@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-16 09:20:55
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 18:03:55
+ * @LastEditTime: 2022-05-17 10:40:50
  * @FilePath: \yhht-ui\yhht-ui\README.md
 -->
 
@@ -22,7 +22,8 @@ import gdUi from 'yhht-ui'
 Vue.use(gdUi)
 
 ```
-
+### 提供主题配置 
+### 提供vscode插件
 ## 1:js
 
 ## 1.1拖拽
