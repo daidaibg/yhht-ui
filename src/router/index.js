@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-14 17:24:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 12:07:35
+ * @LastEditTime: 2022-05-17 11:03:18
  * @FilePath: \yhht-ui\src\router\index.js
  */
 import Vue from 'vue';
@@ -41,6 +41,22 @@ const routes = [
         redirect: '/components/installation',
         component: () => import(/* webpackChunkName: "Components" */ '../views/Com-index.vue'),
         children: [
+          {
+            path: '/components/theme',
+            name: 'theme',
+            component: () => import(/* webpackChunkName: "Components" */ '../views/com/theme/theme.vue'),
+            meta: {
+              type: 'com'
+            }
+          },
+          {
+            path: '/components/plugin',
+            name: 'plugin',
+            component: () => import(/* webpackChunkName: "Components" */ '../views/com/plugin/plugin.vue'),
+            meta: {
+              type: 'com'
+            }
+          },
           {
             path: '/components/yhProgress',
             name: 'yhProgress',

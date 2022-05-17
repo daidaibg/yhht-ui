@@ -17,7 +17,7 @@
     "crypto-js": "^4.1.1",
     "docx-preview": "^0.1.4",
     "element-ui": "^2.15.6",
-    "highlight.js": "^11.4.0",
+    "highlight.js": "^11.5.1",
     "marked": "^3.0.4",
     "nprogress": "^0.2.0",
     "vue": "^2.6.11",

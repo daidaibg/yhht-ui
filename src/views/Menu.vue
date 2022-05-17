@@ -12,22 +12,10 @@
         <i class="el-icon-s-unfold" v-show="phoneMenuCol"></i>
       </div>
       <ul class="menuinner">
-        <li>
-          <h3 style="margin: 0">开发指南</h3>
-          <ul class="menType">
-            <li class="nav_item">
-              <router-link
-                :to="{ path: '/components/installation' }"
-                :class="{ active: active == '/components/installation' }"
-                >安装使用</router-link
-              >
-            </li>
-          </ul>
-        </li>
         <li v-for="(item, i) in menuList" :key="i">
           <h3 style="margin: 0" v-if="item.title">{{ item.title }}</h3>
           <ul class="menType">
-            <div class="nav_title">{{ item.tip }}</div>
+            <div class="nav_title" v-if="item.tip">{{ item.tip }}</div>
             <li class="nav_item" v-for="subItem in item.sub" :key="subItem.url">
               <router-link
                 :to="{ path: subItem.url }"
@@ -48,6 +36,23 @@ export default {
     return {
       phoneMenuCol: true, //手机大小时侧边栏是否缩起来
       menuList: [
+         {
+          title: "开发指南",
+          sub: [
+            {
+              name: "安装使用",
+              url: '/components/installation',
+            },
+            {
+              name: "主题样式",
+              url: "/components/theme",
+            },
+             {
+              name: "vscode插件",
+              url: "/components/plugin",
+            },
+          ],
+        },
         {
           title: "组件",
           tip: "Basic",
