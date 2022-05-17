@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-14 17:24:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:03:18
+ * @LastEditTime: 2022-05-17 11:33:55
  * @FilePath: \yhht-ui\src\router\index.js
  */
 import Vue from 'vue';
@@ -232,7 +232,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: '/yhht-ui/',
+  base: process.env.VUE_APP_URL_HISTORY_URL ?   `/${process.env.VUE_APP_URL_HISTORY_URL}/`:'/',
   routes
 })
 router.beforeEach((to, from, next) => {

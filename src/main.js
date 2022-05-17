@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 15:58:08
+ * @LastEditTime: 2022-05-17 11:31:57
  * @FilePath: \yhht-ui\src\main.js
  */
 import Vue from 'vue'
@@ -33,6 +33,7 @@ Vue.use(yhhtUi)
 Vue.use(yhAndEleUi)
 Vue.use(ElementUI)
 Vue.prototype.$loadFile=loadFile
+Vue.prototype.historyUrl =process.env.VUE_APP_URL_HISTORY_URL
 new Vue({
   router,
   store,

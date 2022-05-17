@@ -2,15 +2,17 @@
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:03:55
+ * @LastEditTime: 2022-05-17 16:20:37
  * @FilePath: \yhht-ui\src\views\com\Installation.vue
 -->
 <template>
   <div class="installation">
+  
     <h2>修改默认主题</h2>
+    
     <h3>使用css强制覆盖</h3>
     <p>
-      如果使用的是vscode开发工具，提供了了<a href="/components/plugin"
+      如果使用的是vscode开发工具，提供了了<a :href="`/${historyUrl}/components/plugin`"
         >vscode插件
       </a>
       它能更好地和 yhht ui 配合使用。
@@ -18,7 +20,7 @@
     <div class="codes">
       <code-light codeType="node" text="npm i yhht-ui -S"></code-light>
     </div>
-    <p>在 全局css 复制一下代码，修改颜色即可替换主题样式：</p>
+    <p>在 全局css 复制一下代码，修改以下所有颜色即可替换主题系列样式：</p>
 
     <code-light
       wrapClass="codes"
