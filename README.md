@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-16 09:20:55
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 10:40:50
+ * @LastEditTime: 2022-05-17 11:16:37
  * @FilePath: \yhht-ui\yhht-ui\README.md
 -->
 
@@ -24,6 +24,15 @@ Vue.use(gdUi)
 ```
 ### 提供主题配置 
 ### 提供vscode插件
+
+### gitee地址
+
+[https://gitee.com/memeda520/yhht-ui](https://gitee.com/memeda520/yhht-ui)
+
+### github地址
+
+[https://github.com/daidaibg/yhht-ui](https://github.com/daidaibg/yhht-ui)
+
 ## 1:js
 
 ## 1.1拖拽
