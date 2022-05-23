@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-12 09:26:26
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-09 17:21:21
+ * @LastEditTime: 2022-05-23 09:19:51
  * @FilePath: \yhht-ui\yhht-ui\src\index.js
  */
 // import Cropper from '../packages/cropper/index';// 图像预览 暂未写完
@@ -25,37 +25,36 @@ const components = [
   Coordinate
 ];
 
-const install = function(Vue, opts = {}) {
-    components.forEach(component => {
-        // console.log(component)
-      Vue.component(component.name, component);
-    });
-  
-  };
-  /* istanbul ignore if */
+const install = function (Vue, opts = {}) {
+  components.forEach(component => {
+    // console.log(component)
+    Vue.component(component.name, GetCoordinate);
+  });
+};
+/* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-  export default {
-    version: '1.0.1',
-    install,
-    Skeleton,
-    SkeletonItem,
-    Drag,
-    Loading,
-    UploadImg,
-    Button,
-    Coordinate
-  };
+export default {
+  version: '1.0.1',
+  install,
+  Skeleton,
+  SkeletonItem,
+  Drag,
+  Loading,
+  UploadImg,
+  Button,
+  Coordinate
+};
 
-  export {
-    Skeleton,
-    SkeletonItem,
-    Drag,
-    UploadImg,
-    Button,
-    Coordinate,
-    GetCoordinate
-    
-  }
+export {
+  Skeleton,
+  SkeletonItem,
+  Drag,
+  UploadImg,
+  Button,
+  Coordinate,
+  GetCoordinate
+
+}
