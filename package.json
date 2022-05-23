@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name yhht-ui --dest lib yhht-ui/src/index.js"
+    "serve": "vue-cli-service serve --mode dev",
+    "start": "vue-cli-service serve --mode dev",
+    "build": "vue-cli-service build --mode production",
+    "lib": "vue-cli-service build --target lib --name YhhtUi --dest lib yhht-ui/src/index.js"
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
