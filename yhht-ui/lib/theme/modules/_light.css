@@ -9,17 +9,6 @@
     --yh-brand-color-8: #018E9A;
     --yh-brand-color-9: #007680;
     --yh-brand-color-10: #005B62;
-    --yh-brand-color-11:rgba(1,142,154,.65);
-    --yh-remind-color-1: #ecf2fe;
-    --yh-remind-color-2: #d4e3fc;
-    --yh-remind-color-3: #bbd3fb;
-    --yh-remind-color-4: #96bbf8;
-    --yh-remind-color-5: #699ef5;
-    --yh-remind-color-6: #4787f0;
-    --yh-remind-color-7: #266fe8;
-    --yh-remind-color-8: #0052d9;
-    --yh-remind-color-9: #0034b5;
-    --yh-remind-color-10: #001f97;
     --yh-warning-color-1: #fef3e6;
     --yh-warning-color-2: #f9e0c7;
     --yh-warning-color-3: #f7c797;
@@ -111,7 +100,6 @@
     --yh-bg-color-component-hover: var(--yh-gray-color-4);
     --yh-bg-color-component-active: var(--yh-gray-color-6);
     --yh-bg-color-component-disabled: var(--yh-gray-color-2);
-    --yh-bg-color-tertiarycontainer:var( --yh-gray-color-15);
     --yh-bg-color-specialcomponent: #fff;
     --yh-bg-color-comtitle:var(--yh-brand-color-11);
     --yh-text-color-primary: var(--yh-font-gray-1);
@@ -126,13 +114,5 @@
     --yh-border-level-2-color: var(--yh-gray-color-4);
     --yh-component-border: var(--yh-gray-color-4);
     --yh-border-level-3-color: var(--yh-gray-color-5);
-    --yh-shadow-1: 0 1px 10px rgba(0, 0, 0, .05), 0 4px 5px rgba(0, 0, 0, 8%), 0 2px 4px -1px rgba(0, 0, 0, 12%);
-    --yh-shadow-2: 0 3px 14px 2px rgba(0, 0, 0, .05), 0 8px 10px 1px rgba(0, 0, 0, 6%), 0 5px 5px -3px rgba(0, 0, 0, 10%);
-    --yh-shadow-3: 0 6px 30px 5px rgba(0, 0, 0, .05), 0 16px 24px 2px rgba(0, 0, 0, 4%), 0 8px 10px -5px rgba(0, 0, 0, 8%);
-    --yh-shadow-inset-top: inset 0 .5px 0 #dcdcdc;
-    --yh-shadow-inset-right: inset .5px 0 0 #dcdcdc;
-    --yh-shadow-inset-bottom: inset 0 -.5px 0 #dcdcdc;
-    --yh-shadow-inset-left: inset -.5px 0 0 #dcdcdc;
-    --yh-table-shadow-color: rgba(0, 0, 0, .08);
-    --yh-scrollbar-color: rgba(0, 0, 0, .1);
+
 }

@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:31:57
+ * @LastEditTime: 2022-05-23 11:50:19
  * @FilePath: \yhht-ui\src\main.js
  */
 import Vue from 'vue'
@@ -18,6 +18,8 @@ import "yhht-ui/lib/theme/index.css"
 import CodeWrap from "./components/Code-wrap.vue"
 import Codes from './components/Codes.vue'
 import TableParam from './components/scFormTable/table-code.vue'
+import Footer from './components/footer/footer.vue'
+
 import { loadFile } from "@lib";
 import "./directives/highlight"
 import  "./assets/css/index.scss";
@@ -26,7 +28,10 @@ import "yhht-ui/lib/theme/nprogress.css"
 
 Vue.component("code-wrap",CodeWrap)
 Vue.component("code-light",Codes)
-Vue.component("TableParam",TableParam)
+Vue.component("TableParam",TableParam) 
+Vue.component("yh-footer",Footer) 
+
+
 
 Vue.config.productionTip = false
 Vue.use(yhhtUi)

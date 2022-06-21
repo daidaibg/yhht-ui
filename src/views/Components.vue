@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2021-07-15 08:58:59
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-04 12:02:26
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-05-23 11:59:37
  * @FilePath: \yhht-ui\src\views\Components.vue
 -->
 <template>
@@ -52,7 +52,7 @@ export default {
   padding: 0 0px;
   .el-main {
     height: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     padding-top: 50px;
     box-sizing: border-box;
   }

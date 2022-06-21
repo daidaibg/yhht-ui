@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-16 09:20:55
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:27:45
+ * @LastEditTime: 2022-05-23 11:17:22
  * @FilePath: \yhht-ui\yhht-ui\README.md
 -->
 
@@ -53,8 +53,8 @@ Drag(e,dom)
 ##  [完整API](http://www.eheretop.com:18080/yhht-ui/#/components/table-ele)
  [完整API](http://www.eheretop.com:18080/yhht-ui/#/components/table-ele)
 
-## 更新日志 暂时放在讨论里面
-https://github.com/daidaibg/yhht-ui/discussions/categories/announcements
+## 更新日志 
+https://github.com/daidaibg/yhht-ui/releases
 .
 
 
