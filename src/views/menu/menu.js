@@ -88,10 +88,7 @@ export const menuList = [
          name: "树形数据转换",
          url: "/components/tree-js",
        },
-       {
-         name: "正则",
-         url: "/components/any-rule",
-       },
+  
      ],
    },
 
