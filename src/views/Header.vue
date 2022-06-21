@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 16:59:12
+ * @LastEditTime: 2022-06-21 10:36:56
  * @FilePath: \yhht-ui\src\views\Header.vue
 -->
 <template >
@@ -20,6 +20,9 @@
         <div class="item" :class="{ activeItem: active == 'com' }">
           <router-link :to="{ path: '/components' }">组件&JS</router-link>
         </div>
+         <div class="item" :class="{ activeItem: active == 'any' }">
+          <router-link :to="{ path: '/public/any-rule' }">正则</router-link>
+        </div>
         <!-- <div class="item" :class="{ activeItem: active == 'map' }">
           <router-link :to="{ path: '/map' }">地图(gis)</router-link>
         </div>
@@ -31,6 +34,8 @@
         <i class="el-icon-s-operation"></i>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="/components">组件&JS</el-dropdown-item>
+          <el-dropdown-item command="/public/any-rule">正则</el-dropdown-item>
+
           <!-- <el-dropdown-item command="/map">地图(gis)</el-dropdown-item>
           <el-dropdown-item command="/sysAndMap">地图+管理</el-dropdown-item> -->
         </el-dropdown-menu>
@@ -202,15 +207,15 @@ export default {
       cursor: pointer;
       &:hover {
         a {
-          color: var(--yh-brand-color-8);
+          color: var(--yh-brand-color) ;
         }
       }
     }
     .activeItem {
-      border-color: var(--yh-brand-color-8);
+      border-color: var(--yh-brand-color) ;
 
       a {
-        color: var(--yh-brand-color-8);
+        color: var(--yh-brand-color) ;
       }
     }
 

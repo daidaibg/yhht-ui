@@ -111,7 +111,7 @@ export default {
     align-items: center;
 
     &:hover {
-      color: var(--yh-brand-color-8);
+      color: var(--yh-brand-color) ;
     }
   }
   .cursor-pointer {

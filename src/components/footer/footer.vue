@@ -86,7 +86,7 @@ export default {
             margin-bottom: 16px;
             transition: all .2s linear;
             &:hover{
-                    color: var(--yh-brand-color-8)
+                    color: --yh-brand-color
             }
         }
     }

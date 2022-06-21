@@ -30,7 +30,7 @@
     --yh-brand-color-5: #005B62;
     --yh-brand-color-6: #018E9A;
     --yh-brand-color-7: #006a73;   /*向上主色 越浅 */
-    --yh-brand-color-8: #007680;  /*主色调 */
+    --yh-brand-color: #007680;  /*主色调 */
     --yh-brand-color-9: #1a99a4;  /*向下主色 越浅 */
     --yh-brand-color-10: #33a4ae;
     --yh-brand-color-11:rgba(1,142,154,.6);

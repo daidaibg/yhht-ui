@@ -119,11 +119,11 @@ export default {
       text-overflow: ellipsis;
       font-weight: 400;
       &:hover {
-        color: var(--yh-brand-color-8);
+        color: var(--yh-brand-color) ;
       }
     }
     a.active {
-      color: var(--yh-brand-color-8);
+      color: var(--yh-brand-color) ;
     }
   }
 

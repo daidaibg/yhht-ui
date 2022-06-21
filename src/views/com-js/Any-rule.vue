@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2022-02-21 09:03:10
- * @LastEditors: daidai
- * @LastEditTime: 2022-02-25 14:38:18
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-06-21 10:24:02
  * @FilePath: \yhht-ui\src\views\com-js\Any-rule.vue
 -->
 <template>
@@ -219,11 +219,11 @@ export default {
         border-radius: 4px;
         margin-right: 15px;
         padding: 0 5px;
-        background: var(--yh-success-color-4);
+        background: var(--yh-success-color-hover);
         color: #fff;
         font-size: 12px;
         cursor: pointer;
-        box-shadow: 1px 2px 3px var(--yh-success-color-4);
+        box-shadow: 1px 2px 3px var(--yh-success-color-hover);
         margin-bottom: 1px;
         &:hover {
           transition: all 0.3s;
