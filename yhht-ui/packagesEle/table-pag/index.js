@@ -1,11 +1,12 @@
 /*
  * @Author: daidai
  * @Date: 2021-09-13 10:08:16
- * @LastEditors: daidai
- * @LastEditTime: 2021-09-28 14:26:06
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-30 17:28:18
  * @FilePath: \yhht-ui\yhht-ui\packages\table-pag\index.js
  */
-import tablePag from './src/main';
+// @ts-ignore
+import tablePag from './src/main.vue';
 
 /* istanbul ignore next */
 tablePag.install = function(Vue) {

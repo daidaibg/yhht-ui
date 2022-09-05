@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-07-14 17:24:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:33:55
+ * @LastEditTime: 2022-06-21 10:36:48
  * @FilePath: \yhht-ui\src\router\index.js
  */
 import Vue from 'vue';
@@ -28,6 +28,7 @@ const routes = [
     name: 'components',
     component: Home
   },
+ 
 
   {
     path: '/components',
@@ -35,6 +36,22 @@ const routes = [
     redirect: "com-index",
     component: () => import(/* webpackChunkName: "Components" */ '../views/Components.vue'),
     children: [
+      {
+        path: '/public',
+        name: 'public',
+        redirect: "com-index",
+        component: () => import(/* webpackChunkName: "Components-public" */ '../views/Com-public.vue'),
+        children: [
+          {
+            path: '/public/any-rule',
+            name: '/public/any-rule',
+            component: () => import(/* webpackChunkName: "Components" */ '../views/com-js/Any-rule.vue'),
+            meta: {
+              type: 'any'
+            }
+          },
+        ]
+      },
       {
         path: '/com-index',
         name: 'com-index',
@@ -97,14 +114,7 @@ const routes = [
               type: 'com'
             }
           },
-          {
-            path: '/components/any-rule',
-            name: 'any-rule',
-            component: () => import(/* webpackChunkName: "Components" */ '../views/com-js/Any-rule.vue'),
-            meta: {
-              type: 'com'
-            }
-          },
+     
           {
             path: '/components/search',
             name: 'search',
@@ -205,6 +215,7 @@ const routes = [
           },
         ]
       },
+ 
       {
         path: '/sysAndMap',
         name: 'sysAndMap',

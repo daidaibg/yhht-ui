@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-16 15:00:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-16 10:40:31
+ * @LastEditTime: 2022-06-14 18:08:56
  * @FilePath: \yhht-ui\src\views\link-ele\Get-xy\Get-xy.vue
 -->
 
@@ -48,7 +48,6 @@
       <yh-button theme="primary" @click="openGetxy(118.110602, 24.540688)"
         >获取坐标（传参）</yh-button
       >
-
       <yh-coordinate
         @close="close"
         ref="yhxy_ref"
