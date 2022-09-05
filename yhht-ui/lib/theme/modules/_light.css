@@ -1,11 +1,11 @@
 :root:not([theme-mode="dark"]){
-    --yh-brand-color: #018E9A;
     --yh-brand-color-2: #D4F8FB;
     --yh-brand-color-3: #86ccd0;
     --yh-brand-color-4: #86ccd0;
     --yh-brand-color-5: #69E9F3;
     --yh-brand-color-6: #01C9DA;
     --yh-brand-color-7: #1a99a4;
+    --yh-brand-color: #018E9A;
     --yh-brand-color-9: #007680;
     --yh-warning-color: #ed7b2f;
     --yh-warning-color-1: #fef3e6;
