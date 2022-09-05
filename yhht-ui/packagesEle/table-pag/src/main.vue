@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2021-09-13 10:07:08
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-23 14:31:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-06-13 09:20:55
  * @Descripttion: 图像裁剪组件
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\table-pag\src\main.vue
 -->
@@ -16,6 +16,7 @@
     :element-loading-background="loadingBackground"
   >
     <el-table
+    
     ref="el_table"
       :data="data"
       style="width: 100%"
@@ -85,13 +86,15 @@
     </el-table>
     <div class="pagination_wrap">
       <el-pagination
+        v-bind="$attrs"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page.sync="paginationData.currentPage"
         :page-size="paginationData.pageSize"
-        :page-sizes="[10, 20, 30, 50]"
+        :page-sizes="pageSizes"
         :layout="layout"
         :total="total"
+        v-on="$listeners"
       >
       </el-pagination>
     </div>
@@ -159,7 +162,11 @@ export default {
     pageSize:{
       type:Number,
       default:()=>10
-    }
+    },
+    pageSizes:{
+      type:Array,
+      default:()=>[10, 20, 30, 50,100]
+    },
   },
   data() {
     return {
