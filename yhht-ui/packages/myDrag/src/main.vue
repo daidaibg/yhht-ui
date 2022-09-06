@@ -233,7 +233,7 @@ export default {
   width: 660px;
   background: var(--yh-bg-color-container);
   color: var(--yh-text-color-primary);
-  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  /* box-shadow: 0 1px 3px rgb(0 0 0 / 30%); */
   box-shadow: var(--yh-shadow-1);
 }
 .myDrag > .myDrag_title {
@@ -251,7 +251,6 @@ export default {
   width: 100%;
   height: 100%;
   background: var(--yh-brand-color);
-  background: var(--yh-bg-color-comtitle);
 }
 .myDrag > .myDrag_title .drag-top-right {
   position: absolute;
