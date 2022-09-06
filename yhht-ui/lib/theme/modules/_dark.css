@@ -90,4 +90,5 @@
     --yh-border-level-2-color: var(--yh-gray-color-9);
     --yh-component-border: var(--yh-gray-color-9);
     --yh-border-level-3-color:var(--yh-gray-color-7);
+    --yh-shadow-1: 0 4px 6px rgba(0, 0, 0, .06), 0 1px 10px rgba(0, 0, 0, 8%), 0 2px 4px rgba(0, 0, 0, 12%);
 }

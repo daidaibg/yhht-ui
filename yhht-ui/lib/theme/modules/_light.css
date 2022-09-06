@@ -78,7 +78,6 @@
     --yh-bg-color-component-hover: var(--yh-gray-color-4);
     --yh-bg-color-component-active: var(--yh-gray-color-6);
     --yh-bg-color-component-disabled: var(--yh-gray-color-2);
-    --yh-bg-color-comtitle:var(--yh-brand-color-11);
     --yh-text-color-primary: var(--yh-font-gray-1);
     --yh-text-color-secondary: var(--yh-font-gray-2);
     --yh-text-color-placeholder: var(--yh-font-gray-3);
@@ -91,5 +90,7 @@
     --yh-border-level-2-color: var(--yh-gray-color-4);
     --yh-component-border: var(--yh-gray-color-4);
     --yh-border-level-3-color: var(--yh-gray-color-5);
+    --yh-shadow-1: 0 1px 10px rgba(0, 0, 0, .05), 0 4px 5px rgba(0, 0, 0, 8%), 0 2px 4px -1px rgba(0, 0, 0, 12%);
+
 }
 
