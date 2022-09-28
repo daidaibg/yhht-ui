@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2022-02-21 09:03:10
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-06-21 10:24:02
+ * @LastEditTime: 2022-09-28 15:03:11
  * @FilePath: \yhht-ui\src\views\com-js\Any-rule.vue
 -->
 <template>
@@ -153,12 +153,12 @@ export default {
     margin-bottom: 20px;
     box-shadow: 1px 2px 2px var( --yh-shadow-1);
     // position: fixed;
-    /deep/.el-input__inner {
+    :deep(.el-input__inner ){
       padding: 4px 15px;
       height: auto;
       font-size: 16px;
     }
-    /deep/ .el-input__suffix {
+    :deep(.el-input__suffix)  {
       i {
         font-size: 16px;
         margin-top: 2px;

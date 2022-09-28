@@ -1,8 +1,8 @@
 <!--
  * @Author: daidai
  * @Date: 2021-09-18 16:01:52
- * @LastEditors: daidai
- * @LastEditTime: 2022-02-25 09:25:19
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-09-28 15:03:39
  * @FilePath: \yhht-ui\src\views\com-js\Colors.vue
 -->
 <template>
@@ -120,7 +120,7 @@ console.log(color4) //输出 #191919`,
     flex-wrap: wrap;
     margin-bottom: 10px;
     align-items: center;
-    /deep/ .el-input {
+    :deep(.el-input)  {
       max-width: 200px;
       margin-right: 10px;
     }
