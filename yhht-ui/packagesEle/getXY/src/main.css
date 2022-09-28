@@ -69,39 +69,39 @@
   color: #2e2e2e;
 }
 
-.yh-lnglats /deep/  .el-dialog {
+.yh-lnglats .el-dialog {
   border-radius: 10px;
   overflow: hidden;
 }
 
-.yh-lnglats  /deep/  .el-dialog .el-dialog__header {
+.yh-lnglats  .el-dialog__header {
   padding: 8px 20px;
   position: relative;
   background: #D8EAFF;
 }
 
-.yh-lnglats /deep/  .el-dialog .el-dialog__header span {
+.yh-lnglats .el-dialog__header span {
   font-size: 15px;
   font-weight: bold;
   color: #2c2d2e;
 }
 
-.yh-lnglats /deep/  .el-dialog .el-dialog__header .el-dialog__headerbtn {
+.yh-lnglats .el-dialog .el-dialog__header .el-dialog__headerbtn {
   top: 0px;
   height: 100%;
 }
 
-.yh-lnglats /deep/  .el-dialog .el-dialog__header .el-dialog__headerbtn .el-dialog__close {
+.yh-lnglats .el-dialog .el-dialog__header .el-dialog__headerbtn .el-dialog__close {
   color: #525050;
   font-weight: 900;
 }
 
-.yh-lnglats /deep/  .el-dialog .el-dialog__body {
+.yh-lnglats .el-dialog .el-dialog__body {
   padding: 8px;
   position: relative;
 }
 
-.yh-lnglats /deep/  .el-dialog .dialog-footer {
+.yh-lnglats .el-dialog .dialog-footer {
   position: absolute;
   bottom: 24px;
   right: 32px;

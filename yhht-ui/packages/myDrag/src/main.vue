@@ -7,7 +7,7 @@
     <div class="myDrag_wrapper" v-show="visible" :class="{ 'yh-model': model }">
       <div
         class="myDrag"
-        :style="style"
+        :style="myDragstyle"
         ref="drag"
         aria-modal="true"
         :aria-label="title || 'dragdialog'"
@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="myDrag_body">
+        <div class="myDrag_body" :style="` border-radius: 0 0 ${borderRadius}px ${borderRadius}px`">
           <slot></slot>
         </div>
       </div>
@@ -112,15 +112,14 @@ export default {
 
   },
   computed: {
-    style() {
-      let style = {};
+    myDragstyle() {
+      let myDragstyle = {};
       if (this.width) {
-        style.width = this.width + "px";
-        style.marginLeft = -(this.width / 2) + "px";
+        myDragstyle.width = this.width + "px";
+        myDragstyle.marginLeft = -(this.width / 2) + "px";
       }
-      style.top = this.top;
-      style.borderRadius = this.borderRadius + "px";
-      return style;
+      myDragstyle.top = this.top;
+      return myDragstyle;
     },
   },
 
@@ -217,10 +216,8 @@ export default {
 .myDrag_wrapper.yh-model {
   pointer-events: all;
   position: fixed;
-  /* background: rgba(0, 0, 0, 0.5); */
-  background: var( --yh-mask-active);
+  background: rgba(0, 0, 0, 0.45);
   height: calc(100% + 20px);
-
   margin: 0;
 }
 .myDrag {
@@ -231,9 +228,7 @@ export default {
   margin-left: -330px;
   left: 50%;
   width: 660px;
-  background: var(--yh-bg-color-container);
   color: var(--yh-text-color-primary);
-  /* box-shadow: 0 1px 3px rgb(0 0 0 / 30%); */
   box-shadow: var(--yh-shadow-1);
 }
 .myDrag > .myDrag_title {
@@ -273,5 +268,7 @@ export default {
   box-sizing: border-box;
   padding: 8px;
   min-height: 30px;
+  background: var(--yh-bg-color-container);
+
 }
 </style>
