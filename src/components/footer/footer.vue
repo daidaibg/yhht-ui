@@ -5,14 +5,14 @@
                 <div class="title">
                     链接
                 </div>
-                <a href="http://www.eheretop.com/" target="_blank" class="link">主页</a>
+                <a href="https://www.daidaibg.com/" target="_blank" class="link">主页</a>
 
             </div>
             <div class="footer_item">
                 <div class="title">
                     其他
                 </div>
-                <a href="http://www.eheretop.com:18080/yhht-plus" target="_blank" class="link">vue3版本</a>
+                <a href="https://daidaibg.github.io/yhht-plus" target="_blank" class="link">vue3版本</a>
 
             </div>
         </div>
