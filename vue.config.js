@@ -2,7 +2,7 @@
  * @Author: daidai
  * @Date: 2021-09-09 17:19:05
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-17 11:32:30
+ * @LastEditTime: 2023-05-09 14:50:36
  * @FilePath: \yhht-ui\vue.config.js
  */
 const path = require('path')
@@ -12,7 +12,8 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
-    publicPath: process.env.VUE_APP_URL_HISTORY_URL? "/"+process.env.VUE_APP_URL_HISTORY_URL: './', //基本路径
+    // publicPath: process.env.VUE_APP_URL_HISTORY_URL? "/"+process.env.VUE_APP_URL_HISTORY_URL: './', //基本路径
+    publicPath:"./",
     outputDir: 'dist', //输出文件目录
     assetsDir: 'static', //css js 等静态文件目录
     // lintOnSave: 'error', // 设置eslint报错时停止代码编译
