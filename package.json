@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode dev",
+    "dev": "vue-cli-service serve --mode dev",
     "start": "vue-cli-service serve --mode dev",
     "build": "vue-cli-service build --mode production",
     "lib": "vue-cli-service build --target lib --name YhhtUi --dest lib yhht-ui/src/index.js"
