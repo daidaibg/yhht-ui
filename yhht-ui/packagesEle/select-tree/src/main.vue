@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="yh-treeselect">
     <el-select
       :value="valueTitle"
       :clearable="clearable"
@@ -141,7 +141,7 @@ export default {
   height: auto;
   padding: 0;
 }
-::v-deep .el-tree-node:focus > .el-tree-node__content {
+ :deep(.el-tree-node):focus > .el-tree-node__content {
   background-color: transparent;
 }
 
